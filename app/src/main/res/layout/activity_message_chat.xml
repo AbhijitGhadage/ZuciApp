@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_chatting_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_vector_arrow_circle_left" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/profile_male"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="@dimen/_2sdp" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/tv_chatting_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                android:padding="@dimen/_5sdp"
+                android:text="Abhijit Ghadage"
+                android:textColor="@color/app_txt_color_black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_chatting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_chat_right"
+            android:layout_below="@+id/ll_chatting_header"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <RelativeLayout
+            android:id="@+id/ll_chat_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_rectange"
+                android:orientation="horizontal">
+
+                 <EditText
+                        android:fontFamily="@font/bodoniflf_roman"
+                    android:id="@+id/edt_message"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Type a message here..."
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/app_txt_color_black1"
+                    android:textColorHint="@color/app_txt_color_black2" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/btn_attach_file"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:onClick="onClickButtonSend"
+                    android:src="@drawable/ic_vector_attach" />
+
+                <ImageView
+                    android:id="@+id/btn_send"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:onClick="onClickButtonSend"
+                    android:src="@drawable/ic_vector_send_message" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

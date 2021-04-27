@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <color name="purple_200">#FFBB86FC</color>-->
+    <!--    <color name="purple_500">#FF6200EE</color>-->
+    <!--    <color name="purple_700">#FF3700B3</color>-->
+    <color name="teal_200">#D0000000</color>
+    <color name="teal_700">#83000000</color>
+    <!--    <color name="black">#FF000000</color>-->
+    <!--    <color name="white">#FFFFFFFF</color>-->
+
+    <color name="colorOrange">#000</color>
+    <color name="colorYellow">#B7000000</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="app_toolBar_txt_color">#B7000000</color>
+
+    <color name="app_color">#000</color>
+    <color name="app_bg_color">#F1F2F6</color>
+    <color name="app_bg_color_white">#fff</color>
+    <color name="app_cardView_white">#fff</color>
+    <color name="app_cardView_white2">#EFE9E9</color>
+    <color name="app_btn_bg_color">#000</color>
+    <color name="app_btn_bg_color_click">#4B000000</color>
+    <color name="app_view_color">#B7000000</color>
+
+    <color name="app_txt_color_pink">#FF1493</color>
+    <color name="app_txt_color_pink1">#A1FF1493</color>
+    <color name="app_txt_btn_color_white">#FFFFFF</color>
+    <color name="app_txt_color_white">#FFFFFF</color>
+    <color name="app_txt_color_black">#000</color>
+    <color name="app_txt_color_black1">#B7000000</color>
+    <color name="app_txt_color_black2">#83000000</color>
+    <color name="app_txt_color_black3">#68000000</color>
+
+    <color name="purple_200">#000</color>
+    <color name="purple_500">#000</color>
+    <color name="purple_700">#000</color>
+
+    <color name="primary">#E43F3F</color>
+    <color name="primary_dark">#E12929</color>
+    <color name="primary_darker">#CC1D1D</color>
+    <color name="accent">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <!-- Chat Activity -->
+    <color name="localBackground">#827b92</color>
+    <color name="remoteBackground">#484258</color>
+
+    <color name="agora_blue">#CD000000</color>
+</resources>

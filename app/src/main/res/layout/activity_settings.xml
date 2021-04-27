@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/rel_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_vector_arrow_circle_left" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_5sdp"
+                android:text="Settings"
+                android:textColor="@color/app_toolBar_txt_color"
+                android:textSize="@dimen/app_toolBar_txt_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_que_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_toolbar"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/app_view_color" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableStart="@drawable/ic_vector_money"
+                android:drawableEnd="@drawable/ic_vector_right"
+                android:drawablePadding="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="Question Answer"
+                android:textColor="@color/app_txt_color_black1"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/app_view_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_set_rates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_que_ans"
+            android:orientation="vertical">
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableStart="@drawable/ic_vector_money"
+                android:drawableEnd="@drawable/ic_vector_right"
+                android:drawablePadding="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="Rates Define"
+                android:textColor="@color/app_txt_color_black1"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/app_view_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_set_rates"
+            android:orientation="vertical">
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableStart="@drawable/ic_vector_money"
+                android:drawableEnd="@drawable/ic_vector_right"
+                android:drawablePadding="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="Invite Friends"
+                android:textColor="@color/app_txt_color_black1"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/app_view_color" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

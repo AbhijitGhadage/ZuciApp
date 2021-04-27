@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/shape_rectange"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tv_dialog_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/bodoniflf_roman"
+            android:text="Spend 2 coins for view this image !! "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_dialog_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_btn"
+                android:fontFamily="@font/bodoniflf_roman"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+
+                android:text="Cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/app_txt_btn_color_white"
+                android:textSize="@dimen/app_btn_txt_size" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_dialog_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:background="@drawable/shape_btn"
+                android:fontFamily="@font/bodoniflf_roman"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+
+                android:text="Ok"
+                android:textAllCaps="true"
+                android:textColor="@color/app_txt_btn_color_white"
+                android:textSize="@dimen/app_btn_txt_size" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close_dialog"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_vector_close" />
+
+</RelativeLayout>

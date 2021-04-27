@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_30sdp"
+    android:layout_height="wrap_content">
+
+    <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+        android:id="@+id/tv_dialog_timer"
+        android:textSize="19sp"
+        android:text="Zucci App plan Subscription Enjoy unlimited service of video and audio call...!!"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

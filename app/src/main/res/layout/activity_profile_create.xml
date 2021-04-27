@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:id="@+id/rel_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_vector_arrow_circle_left" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_5sdp"
+                android:text="Profile View"
+                android:textColor="@color/app_toolBar_txt_color"
+                android:textSize="@dimen/app_toolBar_txt_size"
+                android:textStyle="bold" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/tv_btn_Skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="SKIP"
+                android:textColor="@color/app_txt_color_black1"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_toolbar"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circle_profile_image"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:src="@drawable/profile_male"
+                            app:civ_border_color="#FF000000"
+                            app:civ_border_width="2dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circle_edit_profile"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_vector_edit"
+                            app:civ_border_color="#000"
+                            app:civ_border_width="1dp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:id="@+id/tv_profile_post"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+
+                                android:text="117"
+                                android:textColor="@color/app_txt_color_black1"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+
+                                android:text="Posts"
+                                android:textColor="@color/app_txt_color_black2"
+                                android:textSize="13sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:id="@+id/tv_profile_followers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+
+                                android:text="385"
+                                android:textColor="@color/app_txt_color_black1"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+
+                                android:text="Followers"
+                                android:textColor="@color/app_txt_color_black2"
+                                android:textSize="13sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:id="@+id/tv_profile_following"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+
+                                android:text="329"
+                                android:textColor="@color/app_txt_color_black1"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+
+                                android:text="Following"
+                                android:textColor="@color/app_txt_color_black2"
+                                android:textSize="13sp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                    android:id="@+id/tv_user_profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+
+                    android:text="Rakesh Sharma"
+                    android:textColor="@color/app_txt_color_black1"
+                    android:textSize="16sp" />
+
+                <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                    android:id="@+id/tv_user_profile_gmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+
+                    android:text="Abhijit@gmail.com"
+                    android:textColor="@color/app_txt_color_black2"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                    android:id="@+id/tv_user_profile_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+
+                    android:text="Love has the potential of wildly piercing your heart and sewing it back again, all at once."
+                    android:textColor="@color/app_txt_color_black3"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/app_cardView_white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_15sdp">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+
+                                android:gravity="center_horizontal"
+                                android:text="Name"
+                                android:textColor="@color/app_txt_color_black2" />
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/app_view_color" />
+
+                             <EditText
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:id="@+id/edit_user_profile_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_weight="1.5"
+                                android:background="@null"
+                                android:editable="false"
+
+                                android:hint="Enter Full Name"
+                                android:imeOptions="actionDone"
+                                android:inputType="textMultiLine"
+                                android:textColor="@color/app_txt_color_black1"
+                                android:textColorHint="@color/app_txt_color_black2"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/app_cardView_white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_15sdp">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+
+                                android:gravity="center_horizontal"
+                                android:text="DOB"
+                                android:textColor="@color/app_txt_color_black2" />
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/app_view_color" />
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:id="@+id/edit_profile_up_dob"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_weight="1.5"
+                                android:clickable="false"
+                                android:drawableEnd="@drawable/ic_vector_calendar"
+                                android:editable="false"
+
+                                android:hint="Select Birth Date"
+                                android:textColor="@color/app_txt_color_black1"
+                                android:textColorHint="@color/app_txt_color_black2" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/app_cardView_white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_15sdp">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+
+                                android:gravity="center_horizontal"
+                                android:text="Age"
+                                android:textColor="@color/app_txt_color_black2" />
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/app_view_color" />
+
+                             <EditText
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:id="@+id/edit_profile_up_age"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_weight="1.5"
+                                android:background="@null"
+                                android:clickable="false"
+                                android:editable="false"
+                                android:enabled="false"
+
+                                android:hint="Enter Age"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:textColor="@color/app_txt_color_black1"
+                                android:textColorHint="@color/app_txt_color_black2"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/app_cardView_white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_15sdp">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+
+                                android:gravity="center_horizontal"
+                                android:text="Bio"
+                                android:textColor="@color/app_txt_color_black2" />
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/app_view_color" />
+
+                             <EditText
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:id="@+id/edit_profile_up_bio"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_weight="1.5"
+                                android:background="@null"
+
+                                android:hint="Enter Bio"
+                                android:imeOptions="actionNext"
+                                android:textColor="@color/app_txt_color_black1"
+                                android:textColorHint="@color/app_txt_color_black2"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/app_cardView_white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_15sdp">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+
+                                android:gravity="center_horizontal"
+                                android:text="Affiliate"
+                                android:textColor="@color/app_txt_color_black2" />
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/app_view_color" />
+
+                             <EditText
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:id="@+id/edit_profile_up_affiliate"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_weight="1.5"
+                                android:background="@null"
+
+                                android:gravity="left|top"
+                                android:hint="Enter Affiliate"
+                                android:lines="3"
+                                android:textColor="@color/app_txt_color_black1"
+                                android:textColorHint="@color/app_txt_color_black2"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/app_cardView_white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_15sdp">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+
+                                android:gravity="center_horizontal"
+                                android:text="Country"
+                                android:textColor="@color/app_txt_color_black2" />
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/app_view_color" />
+
+                            <!--       <RelativeLayout
+                                       android:layout_width="0dp"
+                                       android:layout_height="match_parent"
+                                       android:layout_weight="1.5">-->
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spinner_country"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_weight="1.5"
+                                android:backgroundTint="@color/app_txt_color_black1"
+                                android:gravity="center_vertical"
+                                android:theme="@style/spinnerTheme" />
+
+                            <!--                            </RelativeLayout>-->
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/app_cardView_white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_15sdp">
+
+                            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.7"
+
+                                android:gravity="center_horizontal"
+                                android:text="Location"
+                                android:textColor="@color/app_txt_color_black2" />
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/app_view_color" />
+
+                             <EditText
+                        android:fontFamily="@font/bodoniflf_roman"
+                                android:id="@+id/edit_profile_up_address"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_weight="1.3"
+                                android:background="@null"
+
+                                android:hint="Enter Address"
+                                android:maxLines="3"
+                                android:textColor="@color/app_txt_color_black1"
+                                android:textColorHint="@color/app_txt_color_black2"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_10sdp"
+
+                            android:text="Gender"
+                            android:textColor="@color/app_txt_color_black2"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@color/app_view_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_profile_male"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/app_cardView_white"
+                                app:cardCornerRadius="4dp"
+                                app:cardElevation="5dp"
+                                app:cardMaxElevation="1dp"
+                                app:cardPreventCornerOverlap="true"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_10sdp">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_vector_male" />
+
+                                    <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="@dimen/_10sdp"
+
+                                        android:gravity="center_horizontal"
+                                        android:text="Male"
+                                        android:textColor="@color/black" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_profile_Female"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/app_cardView_white"
+                                app:cardCornerRadius="4dp"
+                                app:cardElevation="5dp"
+                                app:cardMaxElevation="1dp"
+                                app:cardPreventCornerOverlap="true"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_10sdp">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_vector_female" />
+
+                                    <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="@dimen/_10sdp"
+
+                                        android:gravity="center_horizontal"
+                                        android:text="Female"
+                                        android:textColor="@color/black" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                android:fontFamily="@font/bodoniflf_roman"
+                        android:id="@+id/btn_profile_create"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_60sdp"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:layout_marginEnd="@dimen/_60sdp"
+                        android:layout_marginBottom="@dimen/_50sdp"
+                        android:background="@drawable/shape_btn"
+
+                        android:text="UPDATE"
+                        android:textAllCaps="true"
+                        android:textColor="@color/app_txt_btn_color_white"
+                        android:textSize="@dimen/app_btn_txt_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "95798953688",
+    "project_id": "zuciapp-45d67",
+    "storage_bucket": "zuciapp-45d67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95798953688:android:6e70ece406f57a936af9ad",
+        "android_client_info": {
+          "package_name": "com.zuci.zuciapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95798953688-o5lt9cf8ae6l5m5lvn6sk14f265ancub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHhPtr-ofFPC7dy7JHdSVEabnfLrMrTnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95798953688-o5lt9cf8ae6l5m5lvn6sk14f265ancub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+
+                android:gravity="center"
+                android:text="NA"
+                android:textColor="@color/app_txt_color_black"
+                android:textSize="@dimen/_16sdp" />
+
+            <LinearLayout
+                android:id="@+id/ll_self_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_question"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+
+                        android:gravity="center"
+                        android:text="You"
+                        android:textColor="@color/app_txt_color_black1"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_profile_image"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:src="@drawable/profile_male"
+                        app:civ_border_color="#C5C1C1"
+                        app:civ_border_width="1dp" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_self_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_partner_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_self_info"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:src="@drawable/profile_male"
+                        app:civ_border_color="#C5C1C1"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+
+                        android:gravity="center"
+                        android:text="Your Ideal Person Would Say"
+                        android:textColor="@color/app_txt_color_black1"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_partner_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_50sdp"
+                    android:layout_marginBottom="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/btn_profile_create"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_partner_info"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/shape_btn"
+
+                android:text="SUBMIT"
+                android:textAllCaps="true"
+                android:textColor="@color/app_txt_btn_color_white"
+                android:textSize="@dimen/app_btn_txt_size"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

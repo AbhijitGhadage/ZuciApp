@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/tv_paid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paid to \nZuciApp"
+                android:textColor="@color/app_txt_color_black1"
+                android:textSize="15sp" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/tv_tra_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="₹ 100"
+                android:textColor="@color/app_txt_color_black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/tv_tra_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_paid"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="22-03-2021"
+                android:textColor="@color/app_txt_color_black3"
+                android:textSize="13sp" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/tv_tran_dr_cr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_paid"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Debited"
+                android:textColor="@color/app_txt_color_black2"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/app_view_color"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

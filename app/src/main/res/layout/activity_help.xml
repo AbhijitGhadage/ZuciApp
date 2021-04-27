@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_vector_arrow_circle_left" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_5sdp"
+                android:text="Help/Support"
+                android:textColor="@color/app_toolBar_txt_color"
+                android:textSize="@dimen/app_toolBar_txt_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_25sdp">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="Contact Details"
+                android:textColor="@color/app_txt_color_black"
+                android:textSize="25sp" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="If you still have trouble, you can contact us through the call or email for support account."
+                android:textColor="#FF9800"
+                android:textSize="15sp" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:autoLink="phone"
+                android:text="Phone number:    +918888888888"
+                android:textColor="@color/app_txt_color_black2"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:autoLink="email"
+                android:text="Email:    info@support.com"
+                android:textColor="@color/app_txt_color_black2"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

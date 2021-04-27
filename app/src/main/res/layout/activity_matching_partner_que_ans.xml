@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rel_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_vector_arrow_circle_left" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_5sdp"
+                android:text="Matching Partner"
+                android:textColor="@color/app_toolBar_txt_color"
+                android:textSize="@dimen/app_toolBar_txt_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rel_toolbar"
+            android:id="@+id/rl_app_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/iv_prev"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/ic_arrow_left"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_arraow_right"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <com.zuci.zuciapp.ui.matchingPartnerQA.SwipeDisabledViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_tab_indicators"
+            android:layout_below="@+id/rl_app_logo"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:overScrollMode="never" />
+
+        <LinearLayout
+            android:id="@+id/ll_tab_indicators"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/txtQueNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/app_txt_color_black1"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                android:id="@+id/tv_total_que"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" / 15"
+                android:textColor="@color/app_txt_color_black1"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

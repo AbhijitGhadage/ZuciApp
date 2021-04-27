@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_message_frd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_7sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circle_profile_image"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/profile_male"
+            app:civ_border_color="#000"
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <LinearLayout
+            android:id="@+id/ll_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/circle_profile_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_chat_uName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="@font/bodoniflf_roman"
+                android:text="Abhijit Ghadage"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <!--  <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical"
+                  android:layout_marginStart="@dimen/_20sdp"
+                  android:layout_marginTop="@dimen/_5sdp"
+
+                  android:text="hi"
+                  android:textColor="@color/jumbo" />-->
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/bodoniflf_roman"
+            android:text="09:30 AM"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/app_view_color" />
+
+</LinearLayout>

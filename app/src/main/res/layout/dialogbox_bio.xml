@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="@drawable/shape_rectange"
+            android:layout_width="match_parent"
+            android:padding="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:fontFamily="@font/bodoniflf_roman"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_btn_rec"
+
+                android:text="Bio"
+                android:textColor="@color/app_txt_color_white"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
+
+
+                <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+                    android:id="@+id/textViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Love has the potential of wildly piercing your heart and sewing it back again,all at once."
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#000" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_vector_close"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"/>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/browser_actions_bg_grey"/>
+        </shape>
+    </item>
+    <item android:width="@dimen/_180sdp"
+        android:height="@dimen/_180sdp"
+        android:gravity="center">
+        <bitmap android:src="@drawable/live_room_bg_logo" />
+    </item>
+</layer-list>

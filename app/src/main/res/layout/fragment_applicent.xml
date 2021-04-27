@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+                        android:fontFamily="@font/bodoniflf_roman"
+            android:id="@+id/tv_affiliate"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/app_txt_color_black1"
+            android:textSize="17sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:text="Web site: http://zucis.in/   \n\nLink About us: https://zucis.in/about/  \n\nLink Contact us: https://zucis.in/contact/" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

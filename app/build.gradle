@@ -1,0 +1,155 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+project.ext {
+    supportLibraryVersion = "30.0.3"
+    daggerVersion = "2.16"
+    butterKnifeVersion = "10.0.0"
+    rxJavaVersion = "2.1.0"
+    rxAndroidVersion = "2.0.2"
+    timberVersion = "4.6.0"
+    lifecycleVersion = "1.1.1"
+    retrofitVersion = "2.5.0";
+    retrofitrxJavaVersion = "2.3.0";
+    okHttpVersion = "3.10.0";
+    okHttpInterceptorVersion = "3.9.1";
+    facebook = "7.1.0";
+    google = "19.0.0";
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.zuci.zuciapp"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 5
+        versionName "1.0.1"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // DO NOT CHANGE, CI may needs it when packaging
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+//    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+//    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
+    //=====================
+
+    // material
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'    // Picaso
+    implementation 'com.android.support:multidex:1.0.3'    // Multidex
+    implementation 'com.github.darshan-miskin:PinView-Android:v1.1.8'     // pin view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'     //circle image view
+//    implementation 'com.github.bumptech.glide:glide:4.9.0'     //this id for displaying user image in ImageView
+
+    // ButterKnife
+    // Android Architecture included AutoViewModelFactory dependency
+    implementation "android.arch.lifecycle:extensions:$project.lifecycleVersion"
+    implementation "android.arch.lifecycle:runtime:$project.lifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$project.lifecycleVersion"
+
+    implementation "com.jakewharton:butterknife:$project.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$project.butterKnifeVersion"
+
+    // Dagger core
+    annotationProcessor "com.google.dagger:dagger-compiler:$project.daggerVersion"
+    implementation "com.google.dagger:dagger:$project.daggerVersion"
+
+    // Dagger Android
+    annotationProcessor "com.google.dagger:dagger-android-processor:$project.daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$project.daggerVersion"
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxjava:$project.rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$project.rxAndroidVersion"
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
+    implementation 'io.reactivex:rxjava:1.2.2'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$project.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$project.retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$project.retrofitrxJavaVersion"
+
+    // OkHttp
+    implementation "com.squareup.okhttp3:okhttp:3.$project.okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$project.okHttpInterceptorVersion"
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:$project.timberVersion"
+
+    // Socket
+    implementation('com.github.nkzawa:socket.io-client:0.5.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    //facebook integration
+    implementation "com.facebook.android:facebook-android-sdk:$project.facebook"
+    // google integration
+    implementation "com.google.android.gms:play-services-auth:$project.google"
+    // agora integration
+    //implementation 'io.agora.rtc:voice-sdk:3.0.0'    // voice call
+    implementation 'io.agora.rtc:full-sdk:3.1.2'     // video call
+    implementation 'io.agora.rtm:rtm-sdk:1.4.1'
+    // firestore
+    implementation 'com.google.firebase:firebase-firestore:22.1.1'
+    implementation 'com.firebaseui:firebase-ui-firestore:3.3.1'
+    // firebase
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-analytics:18.0.2'
+    implementation 'com.google.firebase:firebase-database:19.6.0'
+    implementation 'com.firebaseui:firebase-ui-database:3.3.1'
+    implementation 'com.firebaseui:firebase-ui-storage:3.2.2'
+    // encryption
+    implementation 'com.github.simbiose:Encryption:2.0.1'
+    //You have to add this line
+//    implementation 'com.paypal.sdk:paypal-android-sdk:2.14.2'
+    // google pay
+    implementation 'com.google.android.gms:play-services-wallet:18.1.2'
+
+    implementation 'com.razorpay:checkout:1.6.5'
+
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+/*    implementation 'com.github.tony19:logback-android-core:1.1.1-5'
+    implementation('com.github.tony19:logback-android-classic:1.1.1-4') {
+        // workaround issue #73
+        exclude group: 'com.google.android', module: 'android'
+    }*/
+}
